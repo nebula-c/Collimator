@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Collimator.dir/src/OPPrimaryGeneratorAction.cc.o"
   "CMakeFiles/Collimator.dir/src/OPRunAction.cc.o"
   "CMakeFiles/Collimator.dir/src/OPSteppingAction.cc.o"
-  "Collimator"
   "Collimator.pdb"
+  "Collimator"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-/Users/hipex/Documents/Collimator/build/CMakeFiles/install/local.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/install/strip.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/install.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/list_install_components.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/Collimator.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/rebuild_cache.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/edit_cache.dir
-/Users/hipex/Documents/Collimator/build/CMakeFiles/PROJECT.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/install/local.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/install/strip.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/install.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/list_install_components.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/Collimator.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/rebuild_cache.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/edit_cache.dir
+/Users/schoi/Documents/myCollimator/Collimator/Collimator/build/CMakeFiles/PROJECT.dir

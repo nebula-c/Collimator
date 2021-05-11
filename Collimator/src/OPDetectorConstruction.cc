@@ -97,7 +97,10 @@ G4VPhysicalVolume* OPDetectorConstruction::Construct()
     G4double target_thc = 1.*um;
 
   //aperture parameters
-    G4double aperture_thickness = 5*mm;  //aperture_thickness
+    G4double aperture_length_x = 180.*mm;
+    G4double aperture_length_y = 28.5*mm;
+    G4double aperture_thickness = 8*mm;  //aperture_thickness
+    
 
 // ------------------- Geometric variables end ----------------------- 
 // ------------------------------------------------------------------
@@ -175,20 +178,23 @@ G4VPhysicalVolume* OPDetectorConstruction::Construct()
 
     auto solid_Pb_plate =
       new G4Box("Pbplate",
-                    30*mm/2,
-                    10*mm/2,
+                    aperture_length_x/2,
+                    aperture_length_y/2,
                     aperture_thickness/2);
     
     auto hole1 =
       new G4Tubs("hole1",
-                  0,1,aperture_thickness/2,0,2*M_PI);
+                  0,6.5*mm,3*mm,0,2*M_PI);
 
     auto hole2 =
       new G4Tubs("hole2",
-                  0,1,aperture_thickness/2,0,2*M_PI);
+                  0,3.*mm,8.*mm,0,2*M_PI);
+
+    auto solidAperture0 =
+      new G4SubtractionSolid("solidAperture0", solid_Pb_plate, hole1, 0, G4ThreeVector(0,0,-4*mm));
 
     auto solidAperture =
-      new G4SubtractionSolid("solidAperture", solid_Pb_plate, hole1, 0, G4ThreeVector(0,0,-aperture_thickness/2));
+      new G4SubtractionSolid("solidAperture", solidAperture0, hole2, 0, G4ThreeVector(0,0,-1*mm));
 
     auto logicAperture =
       new G4LogicalVolume(solidAperture,
@@ -212,8 +218,8 @@ G4VPhysicalVolume* OPDetectorConstruction::Construct()
     //G4ThreeVector sourcePosVec = G4ThreeVector(0., 0., -l-d)+trf; // Center of particle source
     G4ThreeVector vacDet_posVec = G4ThreeVector(0,0,5.5*mm);
     G4ThreeVector target_posVec = G4ThreeVector(0,0,0);
-    G4ThreeVector aperture_posVec = G4ThreeVector(0.,0.,-5-aperture_thickness/2-ALPIDE_thc); // If we set d=2, aperture is at the front of the gap. If we set d=3, aperture is at the center of the gap.
-    G4ThreeVector hole_posvec = G4ThreeVector(0,0,-aperture_thickness);
+    //G4ThreeVector aperture_posVec = G4ThreeVector(0.,0.,-5-aperture_thickness/2-ALPIDE_thc); // If we set d=2, aperture is at the front of the gap. If we set d=3, aperture is at the center of the gap.
+    G4ThreeVector aperture_posVec = G4ThreeVector(0,0,-100);
 // --------------------------------------------------------------- 
 // --------------------- Placements ----------------------------
     
